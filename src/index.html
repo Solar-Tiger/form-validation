@@ -10,26 +10,26 @@
 <body>
     <h1>Form Validation with Javascript</h1>
 
-    <form action="post" novalidate class="form-container">
+    <form action="post" class="form-container">
         <div class="email-container">
-            <label for="email">Email:</label>
-            <input type="email" id="email">
+            <label for="email"><span>*</span>Email:</label>
+            <input type="email" id="email" name="email" required>
         </div>
         <div class="country-container">
-            <label for="country">Country:</label>
-            <input type="text" id="country">
+            <label for="country"><span>*</span>Country:</label>
+            <input type="text" id="country" name="country" required>
         </div>
         <div class="zip-code-container">
-            <label for="zip-code">Zip Code:</label>
-            <input type="text" id="zip-code">
+            <label for="zip-code"><span>*</span>Zip Code:</label>
+            <input type="text" id="zip-code" name="zip-code" required>
         </div>
         <div class="password-container">
-            <label for="password">Password:</label>
-            <input type="password" id="password">
+            <label for="password"><span>*</span>Password:</label>
+            <input type="password" id="password" name="password" required>
         </div>
         <div class="password-container">
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password">
+            <label for="confirm-password"><span>*</span>Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
         </div>
         <input type="submit" value="Submit form">
     </form>
