@@ -1,6 +1,7 @@
 :root {
     --border-color: black;
     --max-form-width: 350px;
+    --max-form-elements-width: 250px;
     --input-and-btn-padding: 4px;
 }
 
@@ -17,7 +18,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     margin: 0.5rem;
     padding: 1.5rem 0.5rem;
     max-width: var(--max-form-width);
@@ -38,11 +39,32 @@ h1 {
     gap: 5px;
 
     & label {
-        font-size: 24px;
+        align-self: flex-start;
+        font-size: 20px;
+
+        & span {
+            color: red;
+        }
     }
 
-    & input {
+    & input,
+    select option {
         padding: var(--input-and-btn-padding);
-        min-width: 250px;
+        min-width: var(--max-form-elements-width);
+    }
+
+    & select {
+        padding: var(--input-and-btn-padding);
+        max-width: var(--max-form-elements-width);
+    }
+
+    & input:user-valid,
+    select:user-valid {
+        border: 2px solid green;
+    }
+
+    & input:user-invalid,
+    select:user-invalid {
+        border: 2px solid red;
     }
 }
