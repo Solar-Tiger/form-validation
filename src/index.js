@@ -9,11 +9,11 @@ async function getCountries() {
         .then((data) => {
             console.log(data.data);
 
-            for (let i = 0; i < data.data.length; i++) {
+            for (let country of data.data) {
                 const countryOption = document.createElement('option');
 
-                countryOption.value = data.data[i].name.toLowerCase();
-                countryOption.textContent = data.data[i].name;
+                countryOption.value = country.iso2;
+                countryOption.textContent = country.name;
 
                 countrySelect.appendChild(countryOption);
             }
