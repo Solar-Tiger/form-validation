@@ -21,3 +21,16 @@ async function getCountries() {
 }
 
 getCountries();
+
+const submitBtn = document.querySelector('#submit-btn');
+const email = document.querySelector('#email');
+const country = document.querySelector('#country');
+const zipCode = document.querySelector('#zip-code');
+const password = document.querySelector('#password');
+const confirmPassword = document.querySelector('#confirm-password');
+
+submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    alert('Please fill out the form');
+});
