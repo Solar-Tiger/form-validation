@@ -10,7 +10,7 @@
 <body>
     <h1>Form Validation with Javascript</h1>
 
-    <form action="post" class="form-container">
+    <form action="post" novalidate class="form-container">
         <div class="email-container">
             <label for="email"><span>*</span>Email:</label>
             <input type="email" id="email" name="email" required>
@@ -18,7 +18,7 @@
         <div class="country-container">
             <label for="country"><span>*</span>Country:</label>
             <select id="country" name="country" required>
-                <option value="placeholder">Please select a country...</option>
+                <option placeholder disabled="disabled" selected="selected" value>Please select a country...</option>
             </select>
         </div>
         <div class="zip-code-container">
@@ -33,7 +33,7 @@
             <label for="confirm-password"><span>*</span>Confirm Password:</label>
             <input type="password" id="confirm-password" name="confirm-password" required>
         </div>
-        <input type="submit" value="Submit form">
+        <input type="submit" value="Submit form" id="submit-btn">
     </form>
 </body>
 
